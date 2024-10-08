@@ -5,7 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b2cc97d8-de55-4fc9-be22-3486b28ecdc3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/projeto_biometria/AmbienteDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/projeto_biometria/MeioAmbiente.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projeto_biometria/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projeto_biometria/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projeto_biometria/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projeto_biometria/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projeto_biometria/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projeto_biometria/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

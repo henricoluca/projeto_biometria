@@ -8,18 +8,17 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
 
-        UserDao userDao = new UserDao();
+        AmbienteDao ambienteDao = new AmbienteDao();
 
-        Usuario user = new Usuario();
-        user.setName("João Silva");
-        user.setRole("Administrador");
-        user.setEmail("joao.silva@meioambiente.gov.br");
-        user.setPassword("senha123");
-        user.setNivel_acesso("3");
+        MeioAmbiente ambiente = new MeioAmbiente();
+        ambiente.setTitle("Queimadas");
+        ambiente.setDescription("Informações confidenciais");
+        ambiente.setCategory("Informações confidenciais");
+        ambiente.setNivel_acesso_requerido("3");
 
-        userDao.saveUser(user);
+        ambienteDao.saveMeioAmbiente(ambiente);
 
-        List<Usuario> users = userDao.getAllUsers();
-        users.forEach(u -> System.out.println(u.getName()));
+        List<MeioAmbiente> ambientes = ambienteDao.getAllMeioAmbiente();
+        ambientes.forEach(u -> System.out.println(u.getTitle()));
     }
 }

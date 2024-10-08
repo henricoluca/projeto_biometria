@@ -7,8 +7,10 @@ import org.hibernate.cfg.Configuration;
 
 import java.util.List;
 
-public class UserDao {
+public class AmbienteDao {
+
     private static SessionFactory sessionFactory;
+
     // Inicializa a sessionFactory
     static {
         try {
@@ -18,57 +20,62 @@ public class UserDao {
             throw new ExceptionInInitializerError(ex);
         }
     }
-    // Função para cadastrar um usuário
-    public void saveUser(Usuario user) {
+
+    // Função para criar um registro de Meio Ambiente
+    public void saveMeioAmbiente(MeioAmbiente meioAmbiente) {
         Transaction transaction = null;
-        System.out.println("Tentando salvar o usuário: " + user.getName());
         try (Session session = sessionFactory.openSession()) {
             transaction = session.beginTransaction();
-            session.persist(user);
+            session.persist(meioAmbiente);
             transaction.commit();
-            System.out.println("Usuário salvo com sucesso: " + user.getName());
+            System.out.println("Registro de Meio Ambiente salvo com sucesso: " + meioAmbiente.getTitle());
         } catch (Exception e) {
-            System.err.println("Erro no bloco try: " + e.getMessage());
-            if (transaction != null && transaction.isActive()) {
+            if (transaction != null) {
                 System.out.println("Transação revertida.");
                 transaction.rollback();
             }
-            System.err.println("Erro ao salvar o usuário: " + e.getMessage());
+            System.err.println("Erro ao salvar o registro: " + e.getMessage());
             e.printStackTrace();
         }
     }
-    // Função para listar todos os usuários
-    public List<Usuario> getAllUsers() {
+
+    // Função para buscar todos os registros de Meio Ambiente
+    public List<MeioAmbiente> getAllMeioAmbiente() {
         try (Session session = sessionFactory.openSession()) {
-            return session.createQuery("from Usuario", Usuario.class).list();
+            return session.createQuery("from MeioAmbiente", MeioAmbiente.class).list();
         }
     }
-    // Função para atualizar um usuário
-    public void updateUser(Usuario user) {
+
+    // Função para atualizar um registro de Meio Ambiente
+    public void updateMeioAmbiente(MeioAmbiente meioAmbiente) {
         Transaction transaction = null;
         try (Session session = sessionFactory.openSession()) {
             transaction = session.beginTransaction();
-            session.merge(user);
+            session.merge(meioAmbiente);
             transaction.commit();
         } catch (Exception e) {
             if (transaction != null) {
+                System.out.println("Transação revertida.");
                 transaction.rollback();
             }
             e.printStackTrace();
         }
     }
-    // Função para deletar um usuário por id
-    public void deleteUser(Long id) {
+
+    // Função para deletar um registro de Meio Ambiente pelo ID
+    public void deleteMeioAmbiente(Long id) {
         Transaction transaction = null;
         try (Session session = sessionFactory.openSession()) {
             transaction = session.beginTransaction();
-            Usuario user = session.get(Usuario.class, id);
-            if (user != null) {
-                session.remove(user);
+            MeioAmbiente meioAmbiente = session.get(MeioAmbiente.class, id);
+            if (meioAmbiente != null) {
+                session.remove(meioAmbiente);
                 transaction.commit();
+                System.out.println("Registro de Meio Ambiente deletado com sucesso: " + meioAmbiente.getTitle());
             }
         } catch (Exception e) {
             if (transaction != null) {
+                System.out.println("Transação revertida.");
                 transaction.rollback();
             }
             e.printStackTrace();

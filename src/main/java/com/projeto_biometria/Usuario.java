@@ -5,6 +5,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
+// Template de Usuario - Atributos da tabela do banco de dados
 @Entity
 public class Usuario {
     @Id
