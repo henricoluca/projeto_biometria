@@ -74,4 +74,16 @@ public class UserDao {
             e.printStackTrace();
         }
     }
+
+    // Função para buscar um usuário pelo e-mail
+    public static Usuario getUserByEmail(String email) {
+        try (Session session = sessionFactory.openSession()) {
+            return session.createQuery("FROM Usuario WHERE email = :email", Usuario.class)
+                    .setParameter("email", email)
+                    .uniqueResult();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
 }

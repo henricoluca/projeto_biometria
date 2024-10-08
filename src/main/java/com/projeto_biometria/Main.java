@@ -8,17 +8,23 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
 
-        AmbienteDao ambienteDao = new AmbienteDao();
+        AutenticacaoService autenticacaoService = new AutenticacaoService();
 
-        MeioAmbiente ambiente = new MeioAmbiente();
-        ambiente.setTitle("Queimadas");
-        ambiente.setDescription("Informações confidenciais");
-        ambiente.setCategory("Informações confidenciais");
-        ambiente.setNivel_acesso_requerido("3");
+        // Supondo que o usuário enviou uma imagem para autenticação
+        String email = "usuario@example.com";  // Email do usuário
+        String imageFilePath = "path/para/imagem/facial.jpg"; // Caminho da imagem facial
 
-        ambienteDao.saveMeioAmbiente(ambiente);
+        try {
+            boolean autenticado = autenticacaoService.autenticarUsuario(email, imageFilePath);
 
-        List<MeioAmbiente> ambientes = ambienteDao.getAllMeioAmbiente();
-        ambientes.forEach(u -> System.out.println(u.getTitle()));
+            if (autenticado) {
+                System.out.println("Usuário autenticado com sucesso. Acesso permitido.");
+                // Aqui você pode continuar com o processo de autenticação e checar o nível de acesso
+            } else {
+                System.out.println("Falha na autenticação. Acesso negado.");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

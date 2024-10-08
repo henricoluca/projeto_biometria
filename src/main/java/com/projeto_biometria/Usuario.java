@@ -4,6 +4,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Lob;
 
 // Template de Usuario - Atributos da tabela do banco de dados
 @Entity
@@ -17,6 +18,10 @@ public class Usuario {
     private String email;
     private String password;
     private String nivel_acesso;
+    @Lob // Para armazenar a imagem facial como um objeto binário
+    private byte[] imagemFacial;
+
+    // Getters e Setters
 
     public Long getId() {
         return id;
@@ -64,5 +69,13 @@ public class Usuario {
 
     public void setNivel_acesso(String nivel_acesso) {
         this.nivel_acesso = nivel_acesso;
+    }
+
+    public byte[] getImagemFacial() {
+        return imagemFacial;
+    }
+
+    public void setImagemFacial(byte[] imagemFacial) {
+        this.imagemFacial = imagemFacial;
     }
 }

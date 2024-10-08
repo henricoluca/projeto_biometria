@@ -5,13 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b2cc97d8-de55-4fc9-be22-3486b28ecdc3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/projeto_biometria/AmbienteDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/projeto_biometria/MeioAmbiente.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/projeto_biometria/AutenticacaoService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/projeto_biometria/LoginController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/projeto_biometria/ReconhecimentoFacial.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/projeto_biometria/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projeto_biometria/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projeto_biometria/MeioAmbiente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projeto_biometria/MeioAmbiente.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/projeto_biometria/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projeto_biometria/UserDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/projeto_biometria/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projeto_biometria/Usuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +24,11 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2nAR2D1NLmC8NRJ10Y6oqgjJh6J" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
@@ -36,10 +44,12 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/hluca/APS biometria/biometria",
     "onboarding.tips.debug.path": "/home/hluca/APS biometria/biometria/src/main/java/org/example/Main.java",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.importing"
   }
 }]]></component>
   <component name="RunManager">

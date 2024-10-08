@@ -17,6 +17,7 @@ public class MeioAmbiente {
     private String category;
     private String nivel_acesso_requerido;
 
+    // Getters e Setters
     public Long getId() {
         return id;
     }
@@ -57,4 +58,3 @@ public class MeioAmbiente {
         this.nivel_acesso_requerido = nivelAcessoRequerido;
     }
 }
-
