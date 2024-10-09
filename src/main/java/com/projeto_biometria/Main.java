@@ -1,9 +1,6 @@
 package com.projeto_biometria;
 
-import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
-
-import java.util.List;
+import com.projeto_biometria.service.AutenticacaoService;
 
 public class Main {
     public static void main(String[] args) {

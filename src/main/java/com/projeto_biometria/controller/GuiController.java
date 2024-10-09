@@ -1,5 +1,9 @@
-package com.projeto_biometria;
+package com.projeto_biometria.controller;
 
+
+import com.projeto_biometria.service.AutenticacaoService;
+import com.projeto_biometria.model.MeioAmbiente;
+import com.projeto_biometria.model.Usuario;
 
 import java.util.Arrays;
 import java.util.List;

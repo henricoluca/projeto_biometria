@@ -11,7 +11,7 @@
         <property name="hibernate.connection.password">senha123@</property>
         <property name="hibernate.hbm2ddl.auto">update</property>
         <property name="hibernate.show_sql">true</property>
-        <mapping class="com.projeto_biometria.Usuario"/>
-        <mapping class="com.projeto_biometria.MeioAmbiente"/>
+        <mapping class="com.projeto_biometria.model.Usuario"/>
+        <mapping class="com.projeto_biometria.model.MeioAmbiente"/>
     </session-factory>
 </hibernate-configuration>

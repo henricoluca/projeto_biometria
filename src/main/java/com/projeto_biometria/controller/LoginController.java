@@ -1,4 +1,7 @@
-package com.projeto_biometria;
+package com.projeto_biometria.controller;
+
+import com.projeto_biometria.service.AutenticacaoService;
+import com.projeto_biometria.model.Usuario;
 
 public class LoginController {
     private static AutenticacaoService autenticacaoService;

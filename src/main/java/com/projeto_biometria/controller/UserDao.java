@@ -1,5 +1,7 @@
-package com.projeto_biometria;
+package com.projeto_biometria.controller;
 
+import com.projeto_biometria.util.HibernateUtil;
+import com.projeto_biometria.model.Usuario;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import java.util.List;

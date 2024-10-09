@@ -1,4 +1,4 @@
-package com.projeto_biometria;
+package com.projeto_biometria.util;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;

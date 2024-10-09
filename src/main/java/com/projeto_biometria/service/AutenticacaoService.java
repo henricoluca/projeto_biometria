@@ -1,6 +1,7 @@
-package com.projeto_biometria;
+package com.projeto_biometria.service;
 
-import java.util.Arrays;
+import com.projeto_biometria.controller.UserDao;
+import com.projeto_biometria.model.Usuario;
 
 public class AutenticacaoService {
     private UserDao userDao;

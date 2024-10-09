@@ -1,4 +1,4 @@
-package com.projeto_biometria;
+package com.projeto_biometria.service;
 
 import com.amazonaws.services.rekognition.AmazonRekognition;
 import com.amazonaws.services.rekognition.AmazonRekognitionClientBuilder;

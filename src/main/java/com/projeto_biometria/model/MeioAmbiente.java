@@ -1,4 +1,4 @@
-package com.projeto_biometria;
+package com.projeto_biometria.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
