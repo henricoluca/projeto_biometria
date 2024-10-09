@@ -4,6 +4,7 @@ import com.amazonaws.services.rekognition.AmazonRekognition;
 import com.amazonaws.services.rekognition.AmazonRekognitionClientBuilder;
 import com.amazonaws.services.rekognition.model.*;
 import com.amazonaws.util.IOUtils;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
@@ -18,22 +19,17 @@ public class ReconhecimentoFacial {
         this.rekognitionClient = AmazonRekognitionClientBuilder.defaultClient();
     }
 
-    public static boolean compareFaces(String sourceImagePath, String targetImagePath, Float similarityThreshold) throws Exception {
+    public static boolean compareFaces(String sourceImagePath, byte[] targetImageBytes, Float similarityThreshold) throws Exception {
         ByteBuffer sourceImageBytes;
-        ByteBuffer targetImageBytes;
 
-        // Carrega as imagens de origem e destino
+        // Carrega a imagem de origem
         try (InputStream inputStream = new FileInputStream(new File(sourceImagePath))) {
             sourceImageBytes = ByteBuffer.wrap(IOUtils.toByteArray(inputStream));
         }
 
-        try (InputStream inputStream = new FileInputStream(new File(targetImagePath))) {
-            targetImageBytes = ByteBuffer.wrap(IOUtils.toByteArray(inputStream));
-        }
-
-        // Cria as imagens para requisição
+        // Cria a imagem para requisição
         Image source = new Image().withBytes(sourceImageBytes);
-        Image target = new Image().withBytes(targetImageBytes);
+        Image target = new Image().withBytes(ByteBuffer.wrap(targetImageBytes));
 
         // Configura a requisição de comparação de faces
         CompareFacesRequest request = new CompareFacesRequest()
@@ -47,5 +43,4 @@ public class ReconhecimentoFacial {
 
         return !faceMatches.isEmpty(); // Retorna verdadeiro se houver uma correspondência
     }
-
 }

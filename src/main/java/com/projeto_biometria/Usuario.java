@@ -14,9 +14,7 @@ public class Usuario {
     private Long id;
 
     private String name;
-    private String role;
     private String email;
-    private String password;
     private String nivel_acesso;
     @Lob // Para armazenar a imagem facial como um objeto binário
     private byte[] imagemFacial;
@@ -39,28 +37,12 @@ public class Usuario {
         this.name = name;
     }
 
-    public String getRole() {
-        return role;
-    }
-
-    public void setRole(String role) {
-        this.role = role;
-    }
-
     public String getEmail() {
         return email;
     }
 
     public void setEmail(String email) {
         this.email = email;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
     }
 
     public String getNivel_acesso() {

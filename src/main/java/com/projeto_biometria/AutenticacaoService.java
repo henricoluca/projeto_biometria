@@ -1,8 +1,6 @@
 package com.projeto_biometria;
 
-import com.projeto_biometria.Usuario;
-import com.projeto_biometria.UserDao;
-import com.projeto_biometria.ReconhecimentoFacial;
+import java.util.Arrays;
 
 public class AutenticacaoService {
     private UserDao userDao;
@@ -17,8 +15,8 @@ public class AutenticacaoService {
         Usuario user = userDao.getUserByEmail(email); // Recupera o usuário pelo email
 
         if (user != null) {
-            // Supondo que você armazene a imagem de referência do usuário no banco de dados ou em algum local específico
-            String imagemReferenciaUsuario = "path/para/imagem/referencia/usuario.jpg"; // Coloque o caminho correto
+            // Recupera a imagem facial armazenada do usuário
+            byte[] imagemReferenciaUsuario = user.getImagemFacial();
 
             // Compara a imagem enviada com a imagem de referência do usuário
             boolean faceMatches = reconhecimentoFacial.compareFaces(imageFilePath, imagemReferenciaUsuario, 70F);
@@ -35,11 +33,4 @@ public class AutenticacaoService {
         System.out.println("Usuário não encontrado com o email: " + email);
         return false;
     }
-    public boolean checkNivelAcesso(Usuario user, MeioAmbiente registro) {
-        int nivelAcessoUsuario = Integer.parseInt(user.getNivel_acesso());
-        int nivelAcessoRequerido = Integer.parseInt(registro.getNivel_acesso_requerido());
-
-        return nivelAcessoUsuario >= nivelAcessoRequerido;
-    }
-
 }
