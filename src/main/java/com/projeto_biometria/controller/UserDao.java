@@ -7,7 +7,6 @@ import org.hibernate.Transaction;
 import java.util.List;
 
 public class UserDao {
-    // Substitua a criação do SessionFactory pela chamada à HibernateUtil
     public void saveUser(Usuario user) {
         Transaction transaction = null;
         System.out.println("Tentando salvar o usuário: " + user.getName());
@@ -42,15 +41,6 @@ public class UserDao {
             e.printStackTrace();
             return null;
         }
-    }
-
-    public void saveUserGUI(String name, String email, String nivelAcesso, byte[] imagemFacial) {
-        Usuario user = new Usuario();
-        user.setName(name);
-        user.setEmail(email);
-        user.setNivel_acesso(nivelAcesso);
-        user.setImagemFacial(imagemFacial);
-        saveUser(user); // Chama o método existente
     }
 
 }
